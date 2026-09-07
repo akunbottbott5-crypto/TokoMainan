@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizal Toys - Toko Mainan Anak & Koleksi</title>
+  <style>
+    :root {
+      --primary: #ff4757;
+      --secondary: #ffa502;
+      --accent: #2ed573;
+      --dark: #2f3542;
+      --light: #f1f2f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* Header & Nav */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Catalog Section */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-price {
+      color: var(--primary);
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: auto;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #26af5f;
+    }
+
+    /* Developer Identity & Contact Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--secondary);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .footer-section p, .footer-section a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .footer-section a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid #475569;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🧸 Rizal Toys Store</h1>
+    <p>Pusat Mainan Edukasi & Koleksi Terbaik</p>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h2>Selamat Datang di Toko Mainan Kami!</h2>
+    <p>Temukan berbagai pilihan mainan berkualitas untuk kado, edukasi, dan koleksi pribadi.</p>
+  </section>
+
+  <!-- Katalog Mainan -->
+  <main class="container">
+    <h2 class="section-title">Katalog Produk</h2>
+    <div class="grid">
+
+      <!-- Produk 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=500&q=80" alt="Robot Gundam">
+        <div class="card-body">
+          <div class="card-title">Robot Action Figure</div>
+          <div class="card-price">Rp150.000</div>
+          <a href="https://wa.me/6285792650557?text=Halo%20Rizal,%20saya%20mau%20pesan%20Robot%20Action%20Figure" class="btn">Beli via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&w=500&q=80" alt="Mobil Remote Control">
+        <div class="card-body">
+          <div class="card-title">Mobil RC Drift</div>
+          <div class="card-price">Rp220.000</div>
+          <a href="https://wa.me/6285792650557?text=Halo%20Rizal,%20saya%20mau%20pesan%20Mobil%20RC%20Drift" class="btn">Beli via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=500&q=80" alt="Boneka Beruang">
+        <div class="card-body">
+          <div class="card-title">Boneka Teddy Bear</div>
+          <div class="card-price">Rp95.000</div>
+          <a href="https://wa.me/6285792650557?text=Halo%20Rizal,%20saya%20mau%20pesan%20Boneka%20Teddy%20Bear" class="btn">Beli via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Produk 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=500&q=80" alt="Lego Block">
+        <div class="card-body">
+          <div class="card-title">Mainan Susun Balok (Lego)</div>
+          <div class="card-price">Rp180.000</div>
+          <a href="https://wa.me/6285792650557?text=Halo%20Rizal,%20saya%20mau%20pesan%20Mainan%20Susun%20Balok" class="btn">Beli via WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Info Developer & Kontak -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Pengembang Web</h3>
+        <p><strong>Nama:</strong> Mochammad Rizal Aflan</p>
+        <p><strong>Kelas:</strong> X-RPL2</p>
+        <p>Proyek pembuatan website toko mainan berbasis HTML & CSS.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Hubungi Kami</h3>
+        <p>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/6285792650557">0857-9265-0557</a></p>
+        <p>✉️ <strong>Email:</strong> <a href="mailto:akunbottbott5@gmail.com">akunbottbott5@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      &copy; 2026 Mochammad Rizal Aflan (X-RPL2). All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
